@@ -26,6 +26,14 @@ public class SignUpActivity extends BaseActivity {
     @Override
     public void setupEvents() {
 
+//        비밀번호 확인에 뭐라고 적히는지를 타이핑할때마다 확인.
+//        조건에 따라 문구 변경
+//         => 한글자도 없다 : 비밀번호를 입력해주세요. 글씨색 #A0A0A0
+//         => 8글자 미만 : 비밀번호가 너무 짧습니다. 글씨색 빨간색
+//         => 8글자 이상인데, 그냥 비밀번호와 다르다 => 비밀번호가 서로 다릅니다. 빨간색
+//         => 8글자 이상 + 그냥 비밀번호와 같다 => 사용해도 좋은 비밀번호입니다. #2767E3
+
+
         binding.emailEdt.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
