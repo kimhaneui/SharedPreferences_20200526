@@ -109,6 +109,7 @@
             </LinearLayout>
 
             <EditText
+                android:id="@+id/pwEdt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -139,6 +140,7 @@
             </LinearLayout>
 
             <EditText
+                android:id="@+id/pwCheckEdt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -146,6 +148,7 @@
                 android:inputType="textPassword"/>
 
             <TextView
+                android:id="@+id/pwCheckResultTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="비밀번호를 입력해주세요"
