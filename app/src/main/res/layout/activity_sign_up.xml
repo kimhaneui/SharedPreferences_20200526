@@ -44,10 +44,10 @@
                     android:layout_weight="1"/>
 
                 <TextView
+                    android:id="@+id/emailCheckResultTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#2767E3"
-                    android:text="사용해도 좋은 이메일입니다."
+                    android:text="이메일을 입력해주세요."
                     android:textSize="13sp"/>
 
             </LinearLayout>
@@ -59,6 +59,7 @@
                 android:layout_marginBottom="41dp">
 
                 <EditText
+                    android:id="@+id/emailEdt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="이메일"
