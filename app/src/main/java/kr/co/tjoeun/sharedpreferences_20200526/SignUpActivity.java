@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
 
 import kr.co.tjoeun.sharedpreferences_20200526.databinding.ActivitySignUpBinding;
 
@@ -34,6 +36,27 @@ public class SignUpActivity extends BaseActivity {
 //         => 8글자 이상 + 그냥 비밀번호와 같다 => 사용해도 좋은 비밀번호입니다. #2767E3
 
 
+        binding.nextBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int clickedRadioId = binding.workRadioGroup.getCheckedRadioButtonId();
+
+                if(clickedRadioId==-1){
+                    Toast.makeText(mContext,"아무 항목도 고르지 않았습니다",Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    if(clickedRadioId==R.id.fullTimeBtn){
+                        Toast.makeText(mContext,"풀타임",Toast.LENGTH_SHORT).show();
+                    }
+                    else if(clickedRadioId==R.id.partTimeBtn){
+                        Toast.makeText(mContext,"파트타임",Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        Log.d("오류","잘못된 선택지");
+                    }
+                }
+            }
+        });
         binding.pwCheckEdt.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
